@@ -1,61 +1,97 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joire Tony26</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="La page secrète de Joire Tony26.">
-  <meta name="keywords" content="joire tony26, page secrète, blague">
+<title>Top Secret</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4facfe, #00f2fe);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
+<meta name="description" content="Une petite blague.">
+<meta name="keywords" content="top secret, blague, joire tony26">
 
-    .box {
-      background: rgba(0,0,0,0.3);
-      padding: 40px;
-      border-radius: 20px;
-      max-width: 600px;
-    }
+<style>
+body{
+    margin:0;
+    background:#000;
+    color:#00ff00;
+    font-family:Consolas, monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
 
-    h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
+.box{
+    width:700px;
+    max-width:90%;
+    background:#111;
+    border:2px solid #00ff00;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 0 20px #00ff00;
+}
 
-    p {
-      font-size: 1.4em;
-    }
+h1{
+    text-align:center;
+    color:red;
+    font-size:40px;
+}
 
-    .emoji {
-      font-size: 60px;
-    }
-  </style>
+#texte{
+    white-space:pre-line;
+    font-size:22px;
+    line-height:1.7;
+}
+</style>
 </head>
+
 <body>
-  <div class="box">
-    <div class="emoji">🎉😄</div>
-    <h1>Bravo !</h1>
-    <p>Tu as trouvé la page secrète de <strong>⚠️ Analyse en cours...
 
-📱 Téléphone détecté...
-📸 Photos : trouvées...
-🎵 Musique : trouvée...
-🍕 Niveau de gourmandise : 100 %.
+<div class="box">
+<h1>⚠️ TOP SECRET ⚠️</h1>
 
-😂 Rassure-toi, je n'ai accès à rien !
-C'était juste une blague.</strong> !</p>
-    <p>Tu viens de perdre <strong>3 secondes</strong> de ta vie. 😂</p>
-  </div>
-</body>
-</html>
+<div id="texte">
+Analyse en cours...
+</div>
+
+</div>
+
+<script>
+
+const texte = document.getElementById("texte");
+
+const messages = [
+
+"📱 Téléphone détecté...",
+"📸 Photos détectées...",
+"🎵 Musique détectée...",
+"📂 Fichiers analysés...",
+"🍕 Niveau de gourmandise : 100 %",
+"",
+"😈 Tu as peut-être cru que j'avais piraté ton téléphone...",
+"",
+"😂 Eh non !",
+"",
+"C'était juste une blague !",
+"",
+"🎉 Tu viens de perdre quelques secondes de ta vie.",
+"",
+"😎 Bien joué, tu t'es fait avoir !"
+
+];
+
+let i = 0;
+
+function afficher(){
+
+if(i < messages.length){
+
+texte.innerHTML += "\n" + messages[i];
+
+i++;
+
+setTimeout(afficher,900);
+
+}
+
+}
